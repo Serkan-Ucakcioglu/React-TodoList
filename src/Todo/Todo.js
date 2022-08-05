@@ -59,7 +59,7 @@ function Todo() {
               <span className="text-neutral-700		">{todo.title}</span>
               <button
                 onClick={() => handleDelete(todo)}
-                className="border-solid	border-red-400	border-2 rounded mr-1 px-2 text-white	 bg-red-400	"
+                className="border-solid	border-red-400 hover:bg-red-700		border-2 rounded mr-1 px-2 text-white	 bg-red-400	"
               >
                 Delete
               </button>
