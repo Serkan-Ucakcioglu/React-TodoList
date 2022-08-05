@@ -52,7 +52,7 @@ function Todo() {
         <ul className="	mx-auto	lg flex flex-col items-center	 mt-20">
           {todos.map((todo) => (
             <li
-              className="flex h-10	 items-center justify-between pl-2 border-solid border-2 border-black			rounded h-10 my-2   w-full
+              className="flex h-10 mb-2	 hover:bg-white	 cursor-pointer last-of-type:mb-4	 items-center justify-between pl-2 border-solid border-2 border-black			rounded h-10 my-2   w-full
               "
               key={todo.id}
             >
@@ -66,6 +66,7 @@ function Todo() {
             </li>
           ))}
         </ul>
+        {todos.length > 0 && <div className="bg-sky-300	mt-6	 rounded  border-solid p-2 h-3	border inline " >{todos.length} adet todo var.</div>}
       </div>
     </header>
   );
