@@ -66,7 +66,11 @@ function Todo() {
             </li>
           ))}
         </ul>
-        {todos.length > 0 && <div className="bg-sky-300	mt-6	 rounded  border-solid p-2 h-3	border inline " >{todos.length} adet todo var.</div>}
+        {todos.length > 0 && (
+          <div className="bg-sky-300	mt-6	 rounded  border-solid p-2 h-3	border inline ">
+            {todos.length} adet todo var.
+          </div>
+        )}
       </div>
     </header>
   );
