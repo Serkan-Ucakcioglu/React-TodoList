@@ -3,13 +3,32 @@ import TaskList from "./TaskList";
 
 let nextId = 0;
 function Todo() {
+  
+
   const [text, setText] = useState();
-  const [todos, setTodo] = useState(JSON.parse(localStorage.getItem("todos")),[]);
+  const [todos, setTodo] = useState(() => {
+    // get the todos from localstorage
+    const savedTodos = localStorage.getItem("todos");
+    // if there are todos stored
+    if (savedTodos) {
+      // return the parsed JSON object back to a javascript object
+      return JSON.parse(savedTodos);
+      // otherwise
+    } else {
+      // return an empty array
+      return [];
+    }
+  });
   const input = useRef();
 
   useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
+   localStorage.setItem('todos',JSON.stringify(todos))
   }, [todos]);
+
+
+
+
+
 
   const handleInput = () => {
     if (text.length < 3) {
@@ -22,7 +41,6 @@ function Todo() {
           title: text,
         },
       ]);
-
       setText("");
       console.log(nextId);
     }
