@@ -1,4 +1,4 @@
-import {  useState } from "react";
+import { useState } from "react";
 
 export default function TaskList({ todo, handleDelete, handleChangeTodo }) {
   let [isEditing, setIsEditing] = useState(false);
@@ -33,7 +33,7 @@ export default function TaskList({ todo, handleDelete, handleChangeTodo }) {
   } else {
     todoContent = (
       <>
-       <span>{todo.title}</span>
+        <span>{todo.title}</span>
         <button
           className="btn-primary bg-green-50	rounded p-1 border border-solid border-box cursor-pointer ml-5"
           onClick={() => {
