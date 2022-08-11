@@ -1,9 +1,11 @@
 import { useState, useRef } from "react";
+import TaskList from "./TaskList";
+
 let nextId = 0;
 function Todo() {
   const [text, setText] = useState("");
   const [todos, setTodo] = useState([]);
-
+  const [show, setShow] = useState(false);
   const input = useRef();
 
   const handleInput = () => {
@@ -25,6 +27,18 @@ function Todo() {
   const handleDelete = (todo) => {
     setTodo(todos.filter((a) => a.id != todo.id));
   };
+
+  function handleChangeTodo(newTodo) {
+    setTodo(
+      todos.map((t) => {
+        if (t.id === newTodo.id) {
+          return newTodo;
+        } else {
+          return t;
+        }
+      })
+    );
+  }
 
   return (
     <header>
@@ -52,17 +66,15 @@ function Todo() {
         <ul className="	mx-auto	lg flex flex-col items-center	 mt-20">
           {todos.map((todo) => (
             <li
-              className="flex h-10 mb-2	 hover:bg-white	 cursor-pointer last-of-type:mb-4	 items-center justify-between pl-2 border-solid border-2 border-black			rounded h-10 my-2   w-full
-              "
+              className="flex h-10 mb-2	 hover:bg-white	 cursor-pointer last-of-type:mb-4	 items-center justify-around pl-2 border-solid border-2 border-black			rounded h-10 my-2   w-full"
               key={todo.id}
             >
-              <span className="text-neutral-700		">{todo.title}</span>
-              <button
-                onClick={() => handleDelete(todo)}
-                className="border-solid	border-red-400 hover:bg-red-700		border-2 rounded mr-1 px-2 text-white	 bg-red-400	"
-              >
-                Delete
-              </button>
+              <TaskList
+                class="flex flex-row"
+                todo={todo}
+                handleDelete={handleDelete}
+                handleChangeTodo={handleChangeTodo}
+              />
             </li>
           ))}
         </ul>
