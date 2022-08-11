@@ -1,11 +1,15 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import TaskList from "./TaskList";
 
 let nextId = 0;
 function Todo() {
-  const [text, setText] = useState("");
-  const [todos, setTodo] = useState([]);
+  const [text, setText] = useState();
+  const [todos, setTodo] = useState(JSON.parse(localStorage.getItem("todos")),[]);
   const input = useRef();
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const handleInput = () => {
     if (text.length < 3) {
@@ -18,6 +22,7 @@ function Todo() {
           title: text,
         },
       ]);
+
       setText("");
       console.log(nextId);
     }
@@ -31,8 +36,10 @@ function Todo() {
     setTodo(
       todos.map((t) => {
         if (t.id === newTodo.id) {
+          console.log("newTodo", newTodo);
           return newTodo;
         } else {
+          console.log("t", t);
           return t;
         }
       })
