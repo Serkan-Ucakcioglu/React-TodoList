@@ -25,7 +25,7 @@ function Todo() {
   };
 
   const handleDelete = (todo) => {
-    setTodo(todos.filter((a) => a.id != todo.id));
+    setTodo(todos.filter((a) => a.id !== todo.id));
   };
 
   function handleChangeTodo(newTodo) {
