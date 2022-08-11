@@ -33,18 +33,7 @@ export default function TaskList({ todo, handleDelete, handleChangeTodo }) {
   } else {
     todoContent = (
       <>
-        <input
-          type="text"
-          className="text-neutral-700 border-2	border-gray-500	mr-5 rounded "
-          value={todo.title}
-          disabled={!isEditing}
-          onChange={(e) => {
-            handleChangeTodo({
-              ...todo,
-              title: e.target.value,
-            });
-          }}
-        />
+       <span>{todo.title}</span>
         <button
           className="btn-primary bg-green-50	rounded p-1 border border-solid border-box cursor-pointer"
           onClick={() => {
