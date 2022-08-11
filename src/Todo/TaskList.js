@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import {  useState } from "react";
 
 export default function TaskList({ todo, handleDelete, handleChangeTodo }) {
   let [isEditing, setIsEditing] = useState(false);
@@ -26,7 +26,7 @@ export default function TaskList({ todo, handleDelete, handleChangeTodo }) {
             setIsEditing((isEditing = !isEditing));
           }}
         >
-          save
+          Save
         </button>
       </>
     );

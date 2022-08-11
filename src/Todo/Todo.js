@@ -5,7 +5,6 @@ let nextId = 0;
 function Todo() {
   const [text, setText] = useState("");
   const [todos, setTodo] = useState([]);
-  const [show, setShow] = useState(false);
   const input = useRef();
 
   const handleInput = () => {
