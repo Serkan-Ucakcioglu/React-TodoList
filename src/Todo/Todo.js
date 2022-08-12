@@ -59,10 +59,10 @@ function Todo() {
       <div className="w-full flex-col items-center justify-center mx-auto">
         <form
           onSubmit={(e) => e.preventDefault()}
-          className="flex items-center	 justify-center pt-9 box-border"
+          className="flex items-center justify-center pt-9 box-border"
         >
           <input
-            className="w-11/12 border-solid h-10 placeholder:italic placeholder:text-slate-400  peer-invalid:text-red-500 block bg-white w-full  rounded-md py-2 pl-9 pr-4 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+            className="w-11/12 border-solid h-10 placeholder:italic placeholder:text-slate-400  peer-invalid:text-red-500 block bg-white w-full rounded-md py-2 pl-9 pr-4 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
             placeholder="Todo..."
             type="text"
             name="search"
