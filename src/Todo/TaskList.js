@@ -10,7 +10,7 @@ export default function TaskList({ todo, handleDelete, handleChangeTodo }) {
       <>
         <input
           type="text"
-          className="text-neutral-700 border-2	border-green-500	mr-5 rounded "
+          className="text-neutral-700 border-2 border-green-500	mr-5 rounded "
           value={todo.title}
           disabled={!isEditing}
           onChange={(e) => {
@@ -21,7 +21,7 @@ export default function TaskList({ todo, handleDelete, handleChangeTodo }) {
           }}
         />
         <button
-          className="btn-primary bg-green-50	rounded p-1 border border-solid border-box cursor-pointer"
+          className="btn-primary bg-green-50 rounded p-1 border border-solid border-box cursor-pointer"
           onClick={(tod) => {
             setIsEditing((isEditing = !isEditing));
           }}
@@ -51,7 +51,7 @@ export default function TaskList({ todo, handleDelete, handleChangeTodo }) {
       <span className="justify-end">{todoContent}</span>
       <button
         onClick={() => handleDelete(todo)}
-        className="border-solid	border-red-400 hover:bg-red-700		border-2 rounded mr-1 px-2 text-white	 bg-red-400	"
+        className="border-solid	border-red-400 hover:bg-red-700	border-2 rounded mr-1 px-2 text-white	 bg-red-400	"
       >
         Delete
       </button>
