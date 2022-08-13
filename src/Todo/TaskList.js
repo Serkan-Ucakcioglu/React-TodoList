@@ -21,7 +21,7 @@ export default function TaskList({ todo, handleDelete, handleChangeTodo }) {
           }}
         />
         <button
-          className="btn-primary bg-green-50 rounded p-1 border border-solid border-box cursor-pointer"
+          className="bg-slate-400	hover:bg-slate-600 text-white font-bold px-1 py-1 rounded-full"
           onClick={(tod) => {
             setIsEditing((isEditing = !isEditing));
           }}
@@ -35,7 +35,7 @@ export default function TaskList({ todo, handleDelete, handleChangeTodo }) {
       <>
         <span>{todo.title}</span>
         <button
-          className="btn-primary bg-green-50	rounded p-1 border border-solid border-box cursor-pointer ml-5"
+          className="bg-slate-400	hover:bg-slate-600 text-white font-bold px-1 py-1 ml-2 rounded-full"
           onClick={() => {
             setIsEditing(true);
           }}

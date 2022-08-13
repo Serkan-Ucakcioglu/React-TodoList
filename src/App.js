@@ -3,7 +3,7 @@ import Todo from "./Todo/Todo";
 
 function App() {
   return (
-    <div className="App bg-gray-200">
+    <div className="App bg-slate-300">
       <div className="container">
         <Todo />
       </div>
