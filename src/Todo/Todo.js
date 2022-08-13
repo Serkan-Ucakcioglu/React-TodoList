@@ -80,7 +80,7 @@ function Todo() {
         <ul className="mx-auto lg flex flex-col items-center mt-20">
           {todos.map((todo) => (
             <li
-              className="flex h-10 mb-2	hover:bg-white cursor-pointer last-of-type:mb-4	items-center justify-around pl-2 border-solid border-2 border-black rounded h-10 my-2  w-full"
+              className="flex h-10 mb-2	hover:bg-slate-300 bg-white cursor-pointer last-of-type:mb-4	items-center justify-around pl-2 border-solid border-2 border-black rounded h-10 my-2  w-full"
               key={todo.id}
             >
               <TaskList
