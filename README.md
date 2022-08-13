@@ -1,6 +1,6 @@
 ### Web
-![image](https://user-images.githubusercontent.com/98692987/184132893-50d6b989-4ba3-4c98-943b-b407532b47d2.png)
+![image](https://user-images.githubusercontent.com/98692987/184511805-03ce2c97-9406-46d5-b92e-107259ecb13a.png)
 
 
 ### Responsive 
-![image](https://user-images.githubusercontent.com/98692987/184132948-1a12bdf9-5963-4db2-8617-a62129823b85.png)
+![image](https://user-images.githubusercontent.com/98692987/184511818-dd8fc18a-452c-43b7-b458-02ef3481c519.png)
